@@ -130,17 +130,16 @@ app.post("/", urlencodedParser, (req, res) => {
     }
 })
 
-// app.post("/addmsg", urlencodedParser, (req, res) => {
-//     try {
-//         var username = req.body.username
-//         var password = req.body.password
+app.post("/addmsg", urlencodedParser, (req, res) => {
+    try {
+        var username = req.body.username
+        var password = req.body.password
+    }
 
-//     }
-
-//     catch(err) {
-//         console.log(err)
-//     }
-// }) 
+    catch(err) {
+        console.log(err)
+    }
+}) 
 
 
 app.listen(80, () => { console.info("flListening on port 80 HTTP") })
