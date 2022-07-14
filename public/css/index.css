@@ -1,0 +1,227 @@
+body {
+    background-image: linear-gradient(135deg, azure 10%, #1904E5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Montserrat";
+    color: #333333;
+    height: 100%;
+    width: 99%;
+  }
+  
+  .box-form {
+    margin: 100px auto;
+    width: 85%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 6px #090b6f85;
+  }
+  .box-form div {
+    height: auto;
+  }
+  .box-form .left {
+    color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../media/social.webp");
+    }
+  .box-form .left .overlay {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background: #5961f9ad;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    padding-bottom: 200px;
+  }
+  .box-form .left .overlay h1 {
+    font-size: 8.5vmax;
+    line-height: 1.1;
+    font-weight: 300;
+    margin: 40px 30px 40px 30px;
+    color: azure;
+    font-family: "comfortaa";
+  }
+  
+  .box-form > .left > .overlay > p > span {
+      margin-left: 50px;
+      font-size: 20px;
+      border-bottom: 2px solid rgb(35, 46, 255);
+      padding-bottom: 5px;
+      color: azure;
+      font-family: "open sans";
+      
+  }
+  
+  .box-form .left .overlay span a {
+    background: #3b5998;
+    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 14px 50px;
+    border-radius: 100px;
+    display: inline-block;
+    box-shadow: 0 3px 6px 1px #042d4657;
+  }
+  .box-form .left .overlay span a:last-child {
+    background: #1dcaff;
+    margin-left: 30px;
+  }
+  .box-form .right {
+    padding: 110px;
+  }
+  .box-form .right h5 > span{
+    font-size: 4.75vmax;
+    font-family: "Quicksand";
+    font-weight: 100;
+    padding-bottom: 4px;
+    border-radius: 3px;
+
+  }
+  .box-form .right h5 {
+    margin-bottom: 75px;
+    text-align: center;
+  }
+  .box-form .right p {
+    font-size: 14px;
+    color: #B0B3B9;
+  }
+  .box-form .right .inputs {
+    overflow: hidden;
+  }
+  .box-form .right input {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 23px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7542ff;
+    color: rgb(138, 36, 247);
+    font-family: "Quicksand";
+    padding: 4px 4px;
+    transition: 0.1s;
+  }
+
+  .box-form .right input:focus {
+    border-bottom: 0px solid black;
+  }
+
+  .box-form .right input::placeholder {
+    color: blueviolet;
+  }
+  
+  #login_button {
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 4px 20px 0px rgb(13, 0, 255);
+    background-image: linear-gradient(135deg, darkblue, blue);
+    cursor: pointer;
+    transition: 0.6s;
+  }
+
+  #signup_button {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 86px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 4px 20px 0px rgba(0, 255, 42, 0.696);
+    background-image: linear-gradient(135deg, rgb(0, 141, 0), rgba(98, 255, 0, 0.771));
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.6s;
+  }
+  
+  label {
+    display: block;
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  label::before {
+    content: ' \f00c';
+    position: absolute;
+    font-family: FontAwesome;
+    background: transparent;
+    border: 3px solid #70F570;
+    border-radius: 4px;
+    color: transparent;
+    left: -30px;
+    transition: all 0.2s linear;
+  }
+  
+  label:hover::before {
+    font-family: FontAwesome;
+    content: ' \f00c';
+    color: #fff;
+    cursor: pointer;
+    background: #70F570;
+  }
+  
+  label:hover::before .text-checkbox {
+    background: #70F570;
+  }
+  
+  #login_button:hover {
+    filter: invert(90%);
+    transition-delay: 1s;
+    transition-property: transform;
+    transform: rotate(360deg);
+  }
+  #signup_button:hover {
+    filter: invert(90%);
+  }
+  @media (max-width: 980px) {
+      .box-form .right {
+        width: 100%;
+      }
+      .box-form {
+        flex-flow: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+      }
+      .box-form > .left > .overlay > p > span {
+        margin-left: 0px;
+        font-size: 20px;
+        border-bottom: 2px solid #B0B3B9;
+        padding-bottom: 0px;
+      }
+      #login_button {
+        width: 60%;
+        font-size: 38px;
+      }
+      .box-form .right input {
+        font-size: 40px;
+        margin: 0 0 45px 0;
+      }
+      .box-form .right h5{
+        font-size: 0px;
+      }
+      .box-form > .left > .overlay > p > span {
+        font-size: 20px;
+        border-bottom: 2px solid lightskyblue;
+        color: azure;
+        font-family: "open sans";
+      }
+      .box-form .left .overlay h1 { 
+        font-size: 140px;
+        text-align: center;
+      }
+      .box-form .left .overlay{ 
+        padding-bottom: 40px;
+      }
+    }
