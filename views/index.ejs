@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class = "login_form">
+        <button id = "login_close_btn" onclick = "login_popup_close()">X</button>
         <form action="/" method="POST">
             <h2><span>Login</span></h2>
             <div class="inputs">
@@ -18,8 +19,7 @@
             <br>
             <input id = "login_btn" type = "submit" value = "Login">
         </form>
-        <button onclick="redirect('/signup')" id = "login_btn" href="/signup">Sign up</button><br>
-        <button id = "login_close_btn" onclick = "login_popup_close()">X</button><br>
+        <!-- <button onclick="redirect('/signup')" id = "login_btn" href="/signup">Sign up</button><br> -->
 
     </div>
     <center>
