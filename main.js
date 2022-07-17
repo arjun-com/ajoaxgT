@@ -24,12 +24,12 @@ function hex(str) {
 }
 
 function unhex(str) {
-	var hex = str
-	var result = "";
-	for (var n = 0; n < hex.length; n += 2) {
-		result = result + String.fromCharCode(parseInt(hex.substr(n, 2), 16));
-	}
-	return result;
+    var hex = str
+    var result = '';
+    for (var n = 0; n < hex.length; n += 2) {
+        result += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+    }
+    return result;
 }
 
 function date_time() {
@@ -111,12 +111,11 @@ app.post("/", urlencodedParser, (req, res) => {
                 if(resp.length != 0) {
                     var get_details = `select * from users where usrnm = "${ username }" and pswd = "${ password }";`
                     db.query(get_details, (err, details) => {
-                        console.log(details)
                         res.render("home.ejs", {
                             "username" : unhex(details[0].usrnm),
                             "created_time" : unhex(details[0].dt),
                             "studid" : unhex(details[0].studid),
-                            "class" : `${unhex(details[0].grade)}${unhex(details[0].section)}`
+                            "class" : `${unhex(details[0].grade)}${unhex(details[0].sec)}`
                         })
                     })
                 }
@@ -130,16 +129,17 @@ app.post("/", urlencodedParser, (req, res) => {
     }
 })
 
-app.post("/addmsg", urlencodedParser, (req, res) => {
-    try {
-        var username = req.body.username
-        var password = req.body.password
-    }
+// app.post("/addmsg", urlencodedParser, (req, res) => {
+//     try {
+//         var username = req.body.username
+//         var password = req.body.password
 
-    catch(err) {
-        console.log(err)
-    }
-}) 
+//     }
+
+//     catch(err) {
+//         console.log(err)
+//     }
+// }) 
 
 
 app.listen(80, () => { console.info("flListening on port 80 HTTP") })
